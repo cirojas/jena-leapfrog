@@ -22,7 +22,7 @@ package org.apache.jena.tdb.sys;
 public class Names
 {
     public static final String primaryIndexTriples      = "SPO" ; 
-    public static final String[] tripleIndexes          = { primaryIndexTriples, "POS", "OSP" } ;
+    public static final String[] tripleIndexes          = { primaryIndexTriples, "POS", "OSP", "SOP", "PSO", "OPS" } ;
 
     public static final String primaryIndexQuads        = "GSPO" ; 
     public static final String[] quadIndexes            = { primaryIndexQuads, "GPOS", "GOSP", "POSG", "OSPG", "SPOG"} ;
