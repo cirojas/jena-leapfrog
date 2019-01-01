@@ -53,6 +53,8 @@ import org.apache.jena.tdb.store.tupletable.TupleIndexRecord ;
 import org.apache.jena.tdb.sys.* ;
 import org.slf4j.Logger ;
 
+import cl.uc.dcc.leapfrog.OpExecutorOptionalTree;
+
 /**
  * This class is the process of building a dataset. Records
  * BlockMgr/BufferChannel/NodeTable for use by the transaction builder.
@@ -227,7 +229,8 @@ public class DatasetBuilderStd {
         DatasetGraphTDB dsg = new DatasetGraphTDB(tripleTable, quadTable, prefixes, transform, storageConfig) ;
         // TDB does filter placement on BGPs itself.
         dsg.getContext().set(ARQ.optFilterPlacementBGP, false) ;
-        QC.setFactory(dsg.getContext(), OpExecutorTDB1.OpExecFactoryTDB) ;
+        //QC.setFactory(dsg.getContext(), OpExecutorTDB1.OpExecFactoryTDB) ;
+        QC.setFactory(dsg.getContext(), OpExecutorOptionalTree.OpExecFactoryOptionalTree) ;
         return dsg ;
     }
     
