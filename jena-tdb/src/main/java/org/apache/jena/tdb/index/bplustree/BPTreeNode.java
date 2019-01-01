@@ -388,6 +388,7 @@ public final class BPTreeNode extends BPTreePage
     final void promote()        { bpTree.getNodeManager().promote(this) ; }
 
     @Override
+	public
     final void release()        { bpTree.getNodeManager().release(this) ; } 
 
     @Override
