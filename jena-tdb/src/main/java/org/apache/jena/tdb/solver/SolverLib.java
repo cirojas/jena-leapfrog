@@ -159,7 +159,7 @@ public class SolverLib
     /** Create an abortable iterator, storing it in the killList.
      *  Just return the input iterator if kilList is null. 
      */
-    static <T> Iterator<T> makeAbortable(Iterator<T> iter, List<Abortable> killList)
+    public static <T> Iterator<T> makeAbortable(Iterator<T> iter, List<Abortable> killList)
     {
         if ( killList == null )
             return iter ;

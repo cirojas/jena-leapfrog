@@ -231,7 +231,7 @@ public class BPlusTree implements Iterable<Record>, RangeIndex
         }
     }
 
-    private BPTreeNode getRoot()
+    public BPTreeNode getRoot()
     {
         // No caching here.
         BPTreeNode root = nodeManager.getRoot(rootIdx) ;
