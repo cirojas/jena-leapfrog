@@ -339,7 +339,6 @@ public class BGPIter {
 		
 		// now previous have all variables
 		tempGao.addAll(afterOrdered);
-		System.out.println(tempGao);
 		globalAttributeOrder = tempGao.toArray(new Var[tempGao.size()]);
 	}
 	
