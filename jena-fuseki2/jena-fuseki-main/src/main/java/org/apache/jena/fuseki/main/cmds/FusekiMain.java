@@ -102,6 +102,7 @@ public class FusekiMain extends CmdARQ {
 
         static void innerMain(String... argv) {
             JenaSystem.init();
+            ARQ.init();
             new FusekiMain(argv).mainRun();
         }
 
