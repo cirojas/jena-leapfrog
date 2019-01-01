@@ -345,4 +345,14 @@ public final class BPTreeRecords extends BPTreePage
     {
         out.print(toString()) ;
     }
+    
+    public Record search(Record rec)
+    {
+    	int idx = rBuff.find(rec) ;
+    	idx = idx >= 0 ? idx : decodeIndex(idx) ;
+    	if (rBuff.size() <= idx) {
+    		return null;
+    	}
+    	return rBuff.get(idx) ;
+    }
 }
